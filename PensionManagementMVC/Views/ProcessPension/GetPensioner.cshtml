@@ -1,0 +1,79 @@
+﻿@model PensionManagementMVC.Models.ProcessPension
+
+@{
+    ViewData["Title"] = "GetPensioner";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/Getpension.css" />
+</head>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="card" style="margin-top:200px;padding:20px">
+            <form asp-action="GetPensioner">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label class="control-label">Enter Pensioner Name</label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Date of Birth</label>
+                            <input asp-for="DOB" class="form-control" />
+                            <span asp-validation-for="DOB" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Enter PAN Number</label>
+                            <input asp-for="PAN" class="form-control" />
+                            <span asp-validation-for="PAN" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Enter Aadhaar Number</label>
+                            <input asp-for="AadhaarNo" class="form-control" />
+                            <span asp-validation-for="AadhaarNo" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PensionType" class="control-label"></label>
+                    @*<input asp-for="PensionType" class="form-control" />*@
+                    @Html.DropDownListFor(model => model.PensionType, new List<SelectListItem>
+       {
+               new SelectListItem() {Text = "Self Pension", Value="1"},
+               new SelectListItem() {Text = "Family Pension", Value="2"},
+
+
+}, "--Select pension type --", new { @class = "form-control" })
+                    <span asp-validation-for="PensionType" class="text-danger"></span>
+                </div>
+                @if (ViewBag.PensionerInputError != null)
+                {
+                    <span class="text-danger">@ViewBag.PensionerInputError</span>
+                }
+                <div class="form-group">
+                    <input type="submit" value="Next" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

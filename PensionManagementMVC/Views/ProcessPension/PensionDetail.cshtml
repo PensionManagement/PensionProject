@@ -1,0 +1,60 @@
+﻿@model PensionManagementMVC.Models.Pension
+
+@{
+    ViewData["Title"] = "PensionDetail";
+}
+<head>
+    <link rel="stylesheet" href="~/css/details.css" />
+</head>
+
+
+<div class="container">
+    <div class="row" style="margin-top:200px">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h1 class="text-center">Pension Detail</h1>
+            <dl class="row">
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <dt class="col-sm-4">
+                    Date of Birth
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.DOB)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.PAN)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.PAN)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.PensionType)
+                </dt>
+                <dd class="col-sm-8">
+                    @if (Model.PensionType == 1)
+                    {
+                        <p>Self Pension</p>
+                    }
+                    @if (Model.PensionType == 2)
+                    {
+                        <p>Family Pension</p>
+                    }
+
+                </dd>
+
+            </dl>
+            <div >
+                @Html.ActionLink("Next", "PensionNext", "ProcessPension", null, new { @class = "btn btn-danger" })
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+
+    </div> 
+</div>
+
+

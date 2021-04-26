@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PensionorDetailAPI", "PensionorDetailAPI.csproj", "{3D8140D1-3669-41F8-90F8-0B5083560354}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PensionTesting", "..\PensionTesting\PensionTesting.csproj", "{2FDD787F-32EC-4DA5-8D71-983C6699696E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D8140D1-3669-41F8-90F8-0B5083560354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8140D1-3669-41F8-90F8-0B5083560354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8140D1-3669-41F8-90F8-0B5083560354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8140D1-3669-41F8-90F8-0B5083560354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FDD787F-32EC-4DA5-8D71-983C6699696E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FDD787F-32EC-4DA5-8D71-983C6699696E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FDD787F-32EC-4DA5-8D71-983C6699696E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FDD787F-32EC-4DA5-8D71-983C6699696E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46769A8E-49A3-4AE4-AC0E-ADDA27055655}
+	EndGlobalSection
+EndGlobal
